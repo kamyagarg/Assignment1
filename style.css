@@ -1,0 +1,70 @@
+
+.rectangle{
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+    background-color: #1C2833;
+}
+
+.rectangle-2{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+    background-color: grey;
+    padding: 5px;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+.bg{
+    background-color: white;
+}
+
+.rectangle-26{
+    display: flex;
+    width: 1280px;
+    height: 36px;
+    margin: 56px 0 23px;
+    padding: 11px 984px 10px 13px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+}
+
+.service{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between ;
+}
+
+.mask-copy{
+    display: flex;
+}
+
+.env{
+    display: flex;
+}
+
+.first-line{
+    display: flex;
+}
+.second-line{
+    display: flex;
+}
+.third-line{
+    display: flex;
+}
+.forth-line{
+    display: flex;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
