@@ -29,10 +29,8 @@ li {
 
 .rectangle-26{
     display: flex;
-    width: 1280px;
-    height: 36px;
-    margin: 56px 0 23px;
-    padding: 11px 984px 10px 13px;
+    margin: 10px;
+    padding: 10pxpx;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
     background-color: #ffffff;
 }
@@ -45,21 +43,35 @@ li {
 
 .mask-copy{
     display: flex;
+    justify-content: ;
+    background-color: thistle;
+    margin: 10px;
+    padding: 10px;
+}
+
+.mask-copy button{
+    justify-content: right;
 }
 
 .env{
     display: flex;
+    justify-content: space-evenly;
 }
 
 .first-line{
     display: flex;
 }
+
 .second-line{
     display: flex;
 }
+
+
+
 .third-line{
     display: flex;
 }
+
 .forth-line{
     display: flex;
 }
@@ -67,4 +79,9 @@ li {
 .grid-container{
     display: grid;
     grid-template-columns: auto auto auto;
+}
+
+.grey-box{
+    margin: 5px;
+    
 }
