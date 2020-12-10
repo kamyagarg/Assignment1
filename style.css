@@ -1,7 +1,13 @@
-
+*{
+    font-family: lato;
+}
+body{
+    margin: 0;
+    
+}
 .rectangle{
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     overflow: hidden;
     background-color: #2b343e;
 }
@@ -11,6 +17,7 @@
     height: 33px;
     margin: 2px 29px 7px 0;
     object-fit: contain;
+    padding-inline-start: 5px;  
 }
 
 .img-logo{
@@ -56,7 +63,7 @@
   .Service-One-API-Pyt {
     width: 138px;
     height: 15px;
-    margin: 0 0 0 133px;
+    margin: 0 7px;
     font-family: Lato;
     font-size: 12px;
     font-weight: bold;
@@ -65,6 +72,13 @@
     line-height: normal;
     letter-spacing: normal;
     color: #333333;
+  }
+
+  .Line {
+    width: 8px;
+    height: 14px;
+    margin: 1px 7px 0;
+    border: solid 1px #dddddd;
   }
 
 .Shape {
@@ -81,11 +95,99 @@
     background-color: #ed008c;
   }
 
+  .Service-One {
+    display: flex;
+    justify-content: space-between;
+    font-family: Lato;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    margin: 0 0 0 15px;
+    height: 40px;
+    padding: 25px 0 0 0;
+
+    
+  }
+
+  .service-icon{
+      display: flex;
+
+
+  }
+
+  .btn{
+      float: right;
+      /* width: 130px; */
+      height: 32px;
+      /* margin: 23px 175px 3px 777px; */
+      padding: 5px 19px 5px;
+      border-radius: 100px;
+      border: solid 1px #0a58c9;
+      margin: 0 5px 0 5px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: right;
+      color: #0a58c9;
+      background-color: white;
+  }
+
+  .btn-pink{
+    color: #ed008c;
+    border: solid 1px #ed008c;
+  }
+
+  .Oval {
+    width: 20px;
+    height: 20px;
+    padding: 4px 6px 3px;
+    background-color: #e20074;
+  }
+  
+  .Shape-Copy-3 {
+    width: 8px;
+    height: 13px;
+    background-color: #ffffff;
+  }
+
+  .list{
+    margin: 0 0 0 15px;
+    padding: 0 7px 0 0;
+  }
+
+  .bg-list{
+    padding: 0 15px 0 0;
+    width: 65px;
+    height: 15px;
+    margin: 0 36px 0 0;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #aaaaaa;
+      
+  }
+
+  .bg-list-pink{
+    color: #ed008c;
+  }
+
 .rectangle-2{
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
     background-color:#ffffff;
     padding: 5px;
 }
+
+
 
 ul{
     list-style-type: none;
@@ -99,15 +201,14 @@ li {
 }
 
 .bg{
-    background-color: white;
+    background-color: #f5f4f4
 }
 
 .rectangle-26{
     display: flex;
-    margin: 10px;
-    padding: 10pxpx;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
     background-color: #ffffff;
+    justify-content: space-between;
 }
 
 .service{
@@ -117,20 +218,84 @@ li {
 }
 
 .mask-copy{
+    /* display: flex;
+    justify-content: ;
+    background-color: thistle;
+    margin: 10px;
+    padding: 10px;
+    width: 1208px;
+    height: 72px;
+    margin: 16px 1px 24px 0;
+    padding: 20px 20px 20px 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; */
+    
     display: flex;
     justify-content: ;
     background-color: thistle;
     margin: 10px;
     padding: 10px;
+    /* width: 1208px; */
+    /* height: 72px; */
+    /* margin: 16px 1px 24px 0; */
+    /* padding: 20px 20px 20px 24px; */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    background-color:#ffffff;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.mask-copy-text{
+    width: 378px;
+    height: 20px;
+    margin: 6px 622px 6px 10px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+.warning-sign{
+    display: flex;
+    align-items: center;
+}
 .mask-copy button{
     justify-content: right;
 }
 
+.middle-box{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0 15px;
+}
+
 .env{
     display: flex;
-    justify-content: space-evenly;
+    height: 19px;
+    margin: 30px 5px 17px 0;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--dark);
+    align-items: center;
+    /* padding: 0 10px 0 15px; */
+}
+
+.env-text{
+    padding: 0 5px 0 0;
+}
+.env-icons{
+    display: flex;
 }
 
 .first-line{
@@ -160,3 +325,131 @@ li {
     margin: 5px;
     
 }
+
+
+.shb{
+    display: flex;
+    justify-content: space-between;
+    max-width: 592px;
+}
+
+.time-dis{
+    display: flex;
+}
+.rectangle-bottom{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bottom-box{
+    
+}
+
+.second-half{
+    margin: 0 10px;
+}
+
+.second-half-box{
+    max-width: 592px;
+    max-width: 592px;
+    height: 204px;
+    margin: 0 24px 24px 0;
+    padding: 14px 0 0;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+
+.container{
+    display: flex;
+}
+
+.sec1{   
+    margin: 15px;
+}
+
+.top{
+    padding: 8px 20px 8px 12px;
+    margin: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #77818b;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content{
+    padding: 0 0 26px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.11);
+    background-color: #ffffff;
+    
+}
+
+.top{
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.edit-icon{
+    justify-content: right;
+}
+
+.outermost-container{
+    display: flex;
+}
+/* 
+.con1{
+    width: 60%;
+}
+
+.con2{
+    width: 40%;
+} */
+
+.sec1{
+    max-width: 427px;
+}
+
+
+.bottom1{
+    display: flex;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .bg {
+        display: block;
+    }
+    .outermost-container{
+        display: block;
+    }
+    .con1{
+        display: block;
+    }
+    .con2{
+        display: block;
+    }
+    .second-half{
+        display: block;
+    }
+    .rectangle-26{
+        display: block;
+    }
+    .rectangle-bottom{
+        display: block;
+    }
+    .bottom1{
+        display: block;
+    }
+
+  }
