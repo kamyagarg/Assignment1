@@ -1,0 +1,46 @@
+
+.container{
+    display: flex;
+}
+
+.sec1{
+    
+   
+    margin: 10px;
+}
+
+.top{
+    padding: 8px 20px 8px 12px;
+    margin: 0;
+    border-radius: 3px;
+    background-color: #77818b;
+}
+
+.content{
+    padding: 0 0 26px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.11);
+    background-color: #ffffff;
+    margin: 31px 10px 30px 0;
+}
+
+.top{
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.edit-icon{
+    justify-content: right;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: block;
+    }
+  }
