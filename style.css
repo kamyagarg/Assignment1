@@ -3,12 +3,87 @@
     margin: 0;
     padding: 20px;
     overflow: hidden;
-    background-color: #1C2833;
+    background-color: #2b343e;
 }
+
+.Jazz_text3 {
+    width: 102px;
+    height: 33px;
+    margin: 2px 29px 7px 0;
+    object-fit: contain;
+}
+
+.img-logo{
+    float: right;
+    width: 36px;
+    height: 36px;
+    margin: 0 0 6px 18px;
+}
+
+.fa-bell:before {
+    content: "\f0f3";
+    float: right;
+}
+
+.Home {
+    width: 33px;
+    height: 15px;
+    margin: 0 7px 0 0;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ed008c;
+  }
+
+  .Services {
+    width: 45px;
+    height: 15px;
+    margin: 0 7px;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ed008c;
+  }
+
+  .Service-One-API-Pyt {
+    width: 138px;
+    height: 15px;
+    margin: 0 0 0 133px;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #333333;
+  }
+
+.Shape {
+    width: 16px;
+    height: 19px;
+    margin: 10px 18px 13px 876px;
+    background-color: #ffffff;
+   
+}
+.Shape-arrow {
+    width: 12px;
+    height: 12px;
+    margin: 1px 11px 2px 0;
+    background-color: #ed008c;
+  }
 
 .rectangle-2{
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
-    background-color: grey;
+    background-color:#ffffff;
     padding: 5px;
 }
 
