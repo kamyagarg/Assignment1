@@ -248,7 +248,7 @@ li {
 .mask-copy-text{
     width: 378px;
     height: 20px;
-    margin: 6px 622px 6px 10px;
+    
     font-family: Lato;
     font-size: 14px;
     font-weight: 500;
@@ -257,6 +257,7 @@ li {
     line-height: 1.43;
     letter-spacing: normal;
     color: #000000;
+    
 }
 
 .warning-sign{
