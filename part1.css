@@ -12,7 +12,8 @@
 .top{
     padding: 8px 20px 8px 12px;
     margin: 0;
-    border-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     background-color: #77818b;
 }
 
@@ -21,7 +22,7 @@
     border-radius: 3px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.11);
     background-color: #ffffff;
-    margin: 31px 10px 30px 0;
+    
 }
 
 .top{
@@ -37,6 +38,18 @@
 
 .edit-icon{
     justify-content: right;
+}
+
+.outermost-container{
+    display: flex;
+}
+
+.con1{
+    width: 60%;
+}
+
+.con2{
+    width: 40%;
 }
 
 @media only screen and (max-width: 600px) {

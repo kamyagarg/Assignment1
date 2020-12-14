@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+
+        header {
+            background-color: tomato;
+            text-align: center;
+        }
+
+        footer {
+            background-color: tomato;
+            text-align: center;
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        form {
+            width: fit-content;
+            padding: 20px;
+        }
+
+        label {
+            display: inline-block;
+            width: 104px;
+        }
+
+        input {
+            width: 200px;
+        }
+
+        textarea {
+            width: 200px;
+        }
+
+        input[type="radio"] {
+            width: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Infy Vehicle Service</h1>
+    </header>
+    <main>
+        <h3>Fill In Your Details</h3>
+        <form>
+
+            <div style="margin:5px;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your Name">
+            </div>
+            <div style="margin:5px;">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your Email">
+            </div>
+            <div style="margin:5px;">
+                <label for="stream">Stream:</label>
+                <input type="radio" value="OSS" name="stream">OSS
+                <input type="radio" value="Generic" name="stream">Generic
+            </div>
+            <div style="margin:5px;">
+                <label for="city">City</label>
+                <select id="city">
+                    <option>Chennai</option>
+                    <option>Bangalore</option>
+                    <option>Delhi</option>
+                </select>
+            </div>
+            <div style="margin:5px;">
+                <label for="date">Date of Joining:</label>
+                <input type="date" id="date">
+            </div>
+            <div style="margin:5px;">
+                <label for="contact">Contact No:</label>
+                <input type="number" id="contact" placeholder="Enter your Phone Number">
+            </div>
+            <div style="margin:5px;">
+                <label for="address">Address:</label>
+                <textarea id="address" placeholder="Enter the Address"></textarea>
+            </div>
+
+        </form>
+        <div style="margin:5px;">
+            <button>Register</button>
+            <button>Reset</button>
+        </div>
+        <div style="margin:5px;">
+            <a href="#">Achievements</a>
+            <a href="#">About us</a>
+        </div>
+    </main>
+    <footer>
+        ©Infy
+    </footer>
+</body>
+
+</html>
