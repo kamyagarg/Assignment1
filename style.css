@@ -40,6 +40,7 @@ body{
 
 .notification{
     width: 1.5rem;
+    margin: 0.5rem 0;
 }
 
 .Home {
@@ -99,15 +100,13 @@ body{
    
 }
 .Shape-arrow {
-    width: 12px;
-    height: 12px;
-    margin: 1px 11px 2px 0;
-    
-    fill:  #ed008c;
+    width: 1rem;
+    margin: 0.25rem 0.68rem 0 0;
+    fill: #ed008c;
   }
 
   .Service-One {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     font-family: Lato;
     font-size: 24px;
@@ -119,15 +118,34 @@ body{
     color: #000000;
     margin: 0 0 0 15px;
     height: 40px;
-    padding: 25px 0 0 0;
+    padding: 25px 0 0 0; */
+    display: flex;
+    justify-content: space-between;
+    font-family: Lato;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    margin: 0 0 0 1rem;
+    /* height: 2.5rem; */
+    padding: 1.56rem 0 0 0;
+    /* overflow: hidden; */
+    flex-wrap: wrap;
 
     
   }
 
   .service-icon{
       display: flex;
-      padding: 0 0 0 25px;
+      padding: 0 0 0 1.5rem;
 
+  }
+
+  .view-delete-button{
+    margin: 0 2rem 0 0;   
   }
 
   .btn{
@@ -152,6 +170,10 @@ body{
   .btn-pink{
     color: #ed008c;
     border: solid 1px #ed008c;
+  }
+
+  .service-text{
+    margin: 0 0.5rem 0 0;
   }
 
   .Oval {
@@ -185,6 +207,7 @@ body{
     line-height: normal;
     letter-spacing: normal;
     color: #aaaaaa;
+    padding: 1rem 1rem 1rem 2rem;
       
   }
 
@@ -203,8 +226,9 @@ body{
 ul{
     list-style-type: none;
     margin: 0;
-    padding: 0 0 0 35px;
+    padding: 0 0 0 0.25rem;
     overflow: hidden;
+    flex-wrap: wrap;
 }
 
 li {
@@ -443,6 +467,7 @@ li {
 
 .check-class{
     padding: 1rem 3rem;
+    margin: 0 0 0 1rem;
 }
 
 .minus-class{
@@ -482,12 +507,23 @@ li {
 }
 
 .ic_send{
-    width: 2rem;
+    width: 1.75rem;
+    margin: 0.5rem;
+}
+
+.ic_logs{
+    width: 1.5rem;
+    margin: 0.5rem;
+}
+
+.ic_settings{
+    width: 1.5rem;
+    margin: 0.5rem;
 }
 
 .time-dis{
     display: flex;
-    padding: 0 3rem;
+    padding: 0 3rem 0 1.25rem;
 }
 
 .dep-pink{
@@ -534,6 +570,7 @@ li {
     align-items: center;
     padding: 10px 180px; */
     background-color: #e20074;
+    height: 2.75rem;
 
 }
 
@@ -650,7 +687,7 @@ li {
 }
 
 
-}
+
 
 
 .container{
@@ -658,7 +695,13 @@ li {
 }
 
 .sec1{   
-    margin: 15px;
+    /* margin: 15px;
+    height: 25rem;
+    max-width: 427px;
+    flex-grow: 5; */
+    margin: 1rem;
+    height: 25rem;
+    flex-grow: 5;
 }
 
 .top{
@@ -704,6 +747,7 @@ li {
 .test-class {
     display: flex;
     margin: 5px 5px;
+    
 }
 
 label {
@@ -726,16 +770,10 @@ label {
 .con2{
     display: flex;
     flex-grow: 4;
+    margin: 0 1rem 0 0;
 } 
 
-.sec1{
-    max-width: 427px;
-    flex-grow: 5;
-}
 
-.vertical{
-
-}
 
 .bottom1{
     display: flex;
