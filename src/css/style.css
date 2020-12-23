@@ -53,13 +53,15 @@ body{
 }
 
 .sidenav {
-    height: 100%;
-    width: 26.56rem;
+    /* height: 100%; */
+    /* width: 26.56rem; */
     position: fixed;
+    transform: translateX(100%);
     z-index: 1;
-    top: 3.856rem;
+    top: 3.73rem;
     right: 0;
-    background-color: pink;
+    bottom: 0;
+    background-color:white;
     overflow-x: hidden;
     transition: 0.5s;
     padding: 1rem;
@@ -142,13 +144,40 @@ body{
     color: #222222;
 }
 
+.text-choose-smallest{
+    font-family: Lato;
+    font-size: 8.2px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+.Yes-I-would-like-to{
+    font-family: Lato;
+    font-size: 7.4px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #000000;
+}
+
 .apiOr{
     display: flex;
     justify-content: space-between;
 }
 
 .smallbox{
+    border-radius: 3.4px;
+    border: solid 0.7px #e6e6e6;
+}
 
+.smallbox-icons{
+    width: 2rem;
 }
 
 .text-OR{

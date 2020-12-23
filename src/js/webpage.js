@@ -5,20 +5,51 @@ let modal = document.getElementById("myModal");
 let config_btn = document.getElementById("Configure-modal");
 let span = document.getElementsByClassName("close")[0];
 let bottomboxes = document.getElementsByClassName("bottom1");
+let tab_selected = document.getElementsByClassName("bg-list");
+
+
+// (Theres no pause button for the audio)
+// Merry Christmas 
+var aud = document.getElementById("myAudio"); 
+
+function playAud() { 
+  aud.play(); 
+} 
+
+// PS. Doggo is always reqired
+let leo_var =document.getElementById("myAudio_leo");
+
+function playAud_leo(){
+    leo_var.play();
+}
+
+
+
+// Overview, Access Control and all Tab Selection
+
+for (let i = 0; i < tab_selected.length; i++){
+    tab_selected[i].addEventListener("click",
+    function () {
+        let x = document.querySelector(".bg-list-pink");
+        if(x){
+            x.classList.remove("bg-list-pink");
+        }
+        tab_selected[i].classList.add("bg-list-pink");
+    });
+}
+
 
 
 // SideNav 
 function openSideNav() {
-    sidenav.style.width = "26.56rem";
-    bg_black.classList.add("bg-black");
-    // document.getElementsByClassName("bg")[0].style.backgroundColor = "rgba(0,0,0,0.4)";
-    // document.getElementsByClassName("bg")[0].style.zIndex="1";
+    sidenav.style.transform = "translateX(0%)";
+    // bg_black.classList.add("bg-black");
 }
 
 function closeSideNav() {
-    sidenav.style.width = "0";
-    document.getElementsByClassName("bg")[0].style.backgroundColor = "#f5f4f4";
-    bg_black.classList.remove("bg-black");
+    sidenav.style.transform = "translateX(100%)";
+    // document.getElementsByClassName("bg")[0].style.backgroundColor = "#f5f4f4";
+    // bg_black.classList.remove("bg-black");
 
 }
 
@@ -29,8 +60,7 @@ window.onclick = function (event) {
 }
 
 
-
-
+// Configure button Functinality
 // When the user clicks the button, open the modal 
 config_btn.onclick = function () {
     modal.style.display = "block";

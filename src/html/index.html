@@ -19,7 +19,17 @@
                         class="Jazz_text3">
                 </div>
                 <div class="header-right">
-                    <img src="../icons/notification.svg" alt="" class="notification">
+                    <img src="../icons/leo.PNG" alt="" class="leo notification" id="leo_id" onclick="playAud_leo()">
+                    <audio id="myAudio_leo">
+                        <source src="doggo_barking.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <img src="../icons/notification.svg" alt="" class="notification" onclick="playAud()">
+                    <audio id="myAudio">
+                        <source src="JingleBells.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    
                     <img src="../icons/jhon.PNG" alt="" class="img-logo" onclick="openSideNav()">
                 </div>
             </div>
@@ -40,20 +50,56 @@
 
                 <div class="apiOr">
                     <div class="smallbox">
+                        <img src="../icons/lego.svg" alt="" class="smallbox-icons">
                         A
                     </div>
                     <div class="smallbox">
+                        <img src="../icons/function.svg" alt="" class="smallbox-icons">
                         F
                     </div>
                     <div class="smallbox">
+                        <img src="../icons/globe.svg" alt="" class="smallbox-icons">
                         W
                     </div>
                     <div class="text-OR">OR</div>
                     <div class="smallbox">
+                        <img src="../icons/lego.svg" alt="" class="smallbox-icons">
                         S
                     </div>
                 </div>
-
+                <div class="sidenav-line"></div>
+                <div class="text-choose">
+                    Choose your runtime*
+                </div>
+                <div class="apiOr">
+                    <div class="smallbox">
+                        <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                        N
+                    </div>
+                    <div class="smallbox">
+                        <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                        J
+                    </div>
+                    <div class="smallbox">
+                        <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                        C#
+                    </div>
+                    <div class="smallbox">
+                        <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                        Python
+                    </div>
+                </div>
+                <div class="sidenav-line"></div>
+                <div class="text-choose">
+                    Choose your code repository*
+                </div>
+                <div class="text-choose-smallest">
+                    Would you like to connect your existing code repository? If not, we will create one in your default respository!
+                </div>
+                <div class="Yes-I-would-like-to">
+                    Yes, I would like to connect my own respository!
+                </div>
+                
             </div>
             <div class="rectangle-2">
                 <ul>
@@ -85,7 +131,7 @@
 
     <div class="bg">
         <ul class="list list-overview">
-            <li><a class="bg-list bg-list-pink" href="#">OVERVIEW</a></li>
+            <li><a class="bg-list" href="#" onclick="">OVERVIEW</a></li>
             <li><a class="bg-list" href="#">ACCESS CONTROL</a></li>
             <li><a class="bg-list" href="#">COST</a></li>
             <li><a class="bg-list" href="#">METRICS</a></li>
