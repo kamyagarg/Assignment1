@@ -20,8 +20,40 @@
                 </div>
                 <div class="header-right">
                     <img src="../icons/notification.svg" alt="" class="notification">
-                    <img src="../icons/jhon.PNG" alt="" class="img-logo">
+                    <img src="../icons/jhon.PNG" alt="" class="img-logo" onclick="openSideNav()">
                 </div>
+            </div>
+            <div id="mySidenav" class="sidenav">
+                <div class="text-close">
+                    <div class="AWS-text">Build an AWS Service</div>
+                    <a class="closebtn" onclick="closeSideNav()">&times;</a>
+                </div>
+                <div class="sidenav-line"></div>
+                <div class="text-typeService-choose">
+                    <div class="text-typeOfService">
+                        TYPE OF SERVICES
+                    </div>
+                    <div class="text-choose">
+                        Choose the type of service you want to create*
+                    </div>
+                </div>
+
+                <div class="apiOr">
+                    <div class="smallbox">
+                        A
+                    </div>
+                    <div class="smallbox">
+                        F
+                    </div>
+                    <div class="smallbox">
+                        W
+                    </div>
+                    <div class="text-OR">OR</div>
+                    <div class="smallbox">
+                        S
+                    </div>
+                </div>
+
             </div>
             <div class="rectangle-2">
                 <ul>
@@ -52,13 +84,13 @@
     </div>
 
     <div class="bg">
-        <ul class="list">
-            <li class="bg-list bg-list-pink"><a href="#"></a>OVERVIEW</li>
-            <li class="bg-list"><a href="#"></a>ACCESS CONTROL</li>
-            <li class="bg-list"><a href="#"></a>COST</li>
-            <li class="bg-list"><a href="#"></a>METRICS</li>
-            <li class="bg-list"><a href="#"></a>LOGS</li>
-            <li class="bg-list"><a href="#"></a>ENVIRONMENT SETTINGS</li>
+        <ul class="list list-overview">
+            <li><a class="bg-list bg-list-pink" href="#">OVERVIEW</a></li>
+            <li><a class="bg-list" href="#">ACCESS CONTROL</a></li>
+            <li><a class="bg-list" href="#">COST</a></li>
+            <li><a class="bg-list" href="#">METRICS</a></li>
+            <li><a class="bg-list" href="#">LOGS</a></li>
+            <li><a class="bg-list" href="#">ENVIRONMENT SETTINGS</a></li>
         </ul>
 
         <div class="outermost-container">
@@ -125,7 +157,7 @@
                 <section class="sec1 sec-plat">
                     <section class="security">
                         <section class="top">Security<img src="../icons/edit.svg" alt="" class="edit-icon"></section>
-                        <section class="content" style="height: 50%;">
+                        <section class="content">
                             <div>
                                 <div class="test-class">
                                     <label for="">Status </label>
@@ -140,7 +172,7 @@
                     </section>
                     <section class="platform">
                         <section class="top">Platform<img src="../icons/edit.svg" alt="" class="edit-icon"></section>
-                        <section class="content" style="height: 50%;">
+                        <section class="content">
                             <div>
                                 <div class="test-class">
                                     <label for="">Status </label>
@@ -174,10 +206,10 @@
             </div>
             <div class="env-icons">
                 <section>
-                    <img class="menu-dots" src="../icons/menu-dots.svg" alt="">
+                    <img class="menu-dots" src="../icons/menu-dots.svg" alt="" onclick="largeThumbnail()">
                 </section>
                 <section>
-                    <img class="menu-line" src="../icons/menu-line.svg" alt="">
+                    <img class="menu-line" src="../icons/menu-line.svg" alt="" onclick="listView()">
                 </section>
             </div>
         </div>
@@ -192,7 +224,14 @@
                 </div>
             </section>
             <section class="warning-sign">
-                <button class="btn btn-pink">CONFIGURE <img src="../icons/right-arrow.svg" alt=""> </button>
+                <button class="btn btn-pink" id="Configure-modal">CONFIGURE <img src="../icons/right-arrow.svg" alt="">
+                </button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Some text in the Modal..</p>
+                    </div>
+                </div>
             </section>
         </div>
 
@@ -264,37 +303,6 @@
                         <img src="../icons/ic-settings-grey.svg" class="ic_settings">
                     </div>
                 </section>
-
-                <!-- <section class="second-half-box">
-                    <div class="shb">
-                        <section class="Grey-QA">
-                            <img src="../icons/code-branch-solid.svg" alt="" class="code-branch-icon">
-                            <div class="Grey-text">master</div>
-                        </section>
-                        <section class="Blue-QA">
-                            <section class="prod">PROD</section>
-                        </section>
-                    </div>
-                    <div class="shb shb-mid">
-                        <section class="time-dis">
-                            <section class="three">3 </section>
-                            <section class="hour">
-                                Hours
-                                <section class="ago">Ago</section>
-                            </section>
-                        </section>
-                        <section class="check-icon check-class"><img src="../icons/check.svg" class=""></section>
-                    </div>
-                    <div class="three-hour-bottom">
-                        <section class="dep-time">Deployment Time</section>
-                        <section class="dep-stat">Deployment Status</section>
-                    </div>
-                    <div class="shb shb-bottom-grey">
-                        <img src="../icons/ic-send.svg" class="ic_send">
-                        <img src="../icons/ic-logs.svg" class="ic_logs">
-                        <img src="../icons/ic-settings-grey.svg" class="ic_settings">
-                    </div>
-                </section> -->
             </div>
 
 
@@ -619,7 +627,7 @@
 
     </div>
 
-
+    <script src="../js/webpage.js"></script>
 </body>
 
 </html>
