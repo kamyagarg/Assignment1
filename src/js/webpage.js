@@ -16,17 +16,9 @@ function playAud() {
   aud.play(); 
 } 
 
-// PS. Doggo is always reqired
-let leo_var =document.getElementById("myAudio_leo");
-
-function playAud_leo(){
-    leo_var.play();
-}
-
 
 
 // Overview, Access Control and all Tab Selection
-
 for (let i = 0; i < tab_selected.length; i++){
     tab_selected[i].addEventListener("click",
     function () {
