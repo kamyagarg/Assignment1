@@ -19,16 +19,11 @@
                         class="Jazz_text3">
                 </div>
                 <div class="header-right">
-                    <img src="../icons/notification.svg" alt="" class="notification bellshake">
-                    <!-- <audio id="myAudio">
-                        <source src="JingleBells.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio> -->
-                    
+                    <img src="../icons/notification.svg" alt="" class="notification" onmousemove="bellAnimation()">
                     <img src="../icons/jhon.PNG" alt="" class="img-logo" onclick="openSideNav()">
                 </div>
             </div>
-            <div id="mySidenav" class="sidenav">
+            <div id="mySidenav" class="sidenav close-sidenav">
                 <div class="text-close">
                     <div class="AWS-text">Build an AWS Service</div>
                     <a class="closebtn" onclick="closeSideNav()">&times;</a>
@@ -94,6 +89,9 @@
                 <div class="Yes-I-would-like-to">
                     Yes, I would like to connect my own respository!
                 </div>
+                <form action="">
+
+                </form>
                 
             </div>
             <div class="rectangle-2">
@@ -277,6 +275,46 @@
         </div>
 
         <div class="second-half">
+            <!-- Table view -->
+            <table class="table-hide table">
+                <thead>
+                    <th>BRANCH <img src="../icons/information.svg" alt="" class="table_updown_arrow"></th>
+                    <th>ENVIRONMENT ID <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow"></th>
+                    <th>ACCOUNT <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow"></th>
+                    <th>REGION <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow"></th>
+                    <th>LAST DEPLOYMENT <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow"></th>
+                    <th>DEPLOYMENT STATUS <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow"></th>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>master</td>
+                        <td>Prod</td>
+                        <td>npe2</td>
+                        <td>us-west2</td>
+                        <td>Septmeber 11,2020 8:52AM</td>
+                        <td>sucessfull</td>
+                    </tr>
+                    <!-- <tr class="table-line"></tr>     -->
+                    <tr>
+                        <td>master</td>
+                        <td>STG</td>
+                        <td>npe2</td>
+                        <td>us-west2</td>
+                        <td>Septmeber 11,2020 8:52AM</td>
+                        <td>sucessfull</td>
+                    </tr>
+                    <tr>
+                        <td>feature/development</td>
+                        <td>LK28QSK9L4-DEV</td>
+                        <td>npe2</td>
+                        <td>us-west2</td>
+                        <td>Septmeber 11,2020 8:52AM</td>
+                        <td>sucessfull</td>
+                    </tr>
+                  
+                </tbody>
+            </table>
             <div class="rectangle-26">
                 <section class="second-half-box">
                     <div class="shb">

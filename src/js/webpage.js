@@ -6,19 +6,25 @@ let config_btn = document.getElementById("Configure-modal");
 let span = document.getElementsByClassName("close")[0];
 let bottomboxes = document.getElementsByClassName("bottom1");
 let tab_selected = document.getElementsByClassName("bg-list");
-
-
-// (Theres no pause button for the audio)
-// Merry Christmas 
-var aud = document.getElementById("myAudio"); 
-
-function playAud() { 
-  aud.play(); 
-} 
+let aud = document.getElementById("myAudio");
 
 
 
-// Overview, Access Control and all Tab Selection
+//Bell Animation 
+ let bell_not = document.getElementsByClassName("notification")[0];
+ bell_not.onmouseover = function() {bellAnimation()};
+ bell_not.onmouseout = function() {bellAnimation_stop()};
+
+function bellAnimation(){
+    bell_not.classList.add("bell-animation");   
+}
+function bellAnimation_stop(){
+    bell_not.classList.remove("bell-animation");   
+}
+
+
+
+// Overview, Access Control and all, Tab Selection
 for (let i = 0; i < tab_selected.length; i++){
     tab_selected[i].addEventListener("click",
     function () {
@@ -31,23 +37,22 @@ for (let i = 0; i < tab_selected.length; i++){
 }
 
 
-
 // SideNav 
 function openSideNav() {
-    sidenav.style.transform = "translateX(0%)";
-    // bg_black.classList.add("bg-black");
+    if (sidenav.style.transform == "translateX(100%)") {
+        sidenav.style.transform = "translateX(0%)";
+    } else {       
+        sidenav.style.transform = "translateX(100%)";
+    }
 }
 
 function closeSideNav() {
     sidenav.style.transform = "translateX(100%)";
-    // document.getElementsByClassName("bg")[0].style.backgroundColor = "#f5f4f4";
-    // bg_black.classList.remove("bg-black");
-
 }
 
 window.onclick = function (event) {
     if (event.target == sidenav) {
-        sidenav.style.width = "0";
+        sidenav.style.transform = "translateX(100%)";
     }
 }
 
@@ -71,19 +76,25 @@ window.onclick = function (event) {
 }
 
 
-// Large Thumbnail for bottom boxes
+// Large Thumbnail for bottom boxes / Hiding the table view
 function largeThumbnail(){
-    document.getElementsByClassName("rectangle-26")[0].style.display="flex";
-    for (let i = 0; i < bottomboxes.length; i++) {
-        bottomboxes[i].style.display="flex";
-    }
+    document.getElementsByClassName("table")[0].classList.add("table-hide");
+    document.getElementsByClassName("rectangle-26")[0].classList.remove("table-hide");
+    document.getElementsByClassName("bottom1")[0].classList.remove("table-hide");
+    // document.getElementsByClassName("rectangle-26")[0].style.display="flex";
+    // for (let i = 0; i < bottomboxes.length; i++) {
+    //     bottomboxes[i].style.display="flex";
+    // }
 }
 
-//List view for bottom boxes
+//List/Table view for bottom boxes
 function listView(){
-    document.getElementsByClassName("rectangle-26")[0].style.display="block";
-    for (let i = 0; i < bottomboxes.length; i++) {
-        bottomboxes[i].style.display="block";
-    }
+    document.getElementsByClassName("table")[0].classList.remove("table-hide");
+    document.getElementsByClassName("rectangle-26")[0].classList.add("table-hide");
+    document.getElementsByClassName("bottom1")[0].classList.add("table-hide");
+    // document.getElementsByClassName("rectangle-26")[0].style.display="block";
+    // for (let i = 0; i < bottomboxes.length; i++) {
+    //     bottomboxes[i].style.display="block";
+    // }
 }
 
