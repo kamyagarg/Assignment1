@@ -5,7 +5,6 @@ let modal = document.getElementById("myModal");
 let config_btn = document.getElementById("Configure-modal");
 let span = document.getElementsByClassName("close")[0];
 let bottomboxes = document.getElementsByClassName("bottom1");
-let tab_selected = document.getElementsByClassName("bg-list");
 let aud = document.getElementById("myAudio");
 
 
@@ -25,6 +24,7 @@ function bellAnimation_stop(){
 
 
 // Overview, Access Control and all, Tab Selection
+let tab_selected = document.getElementsByClassName("bg-list");
 for (let i = 0; i < tab_selected.length; i++){
     tab_selected[i].addEventListener("click",
     function () {
@@ -55,6 +55,19 @@ window.onclick = function (event) {
         sidenav.style.transform = "translateX(100%)";
     }
 }
+
+//Sidenav active boxes
+// let smallbox_active = document.getElementsByClassName("smallbox");
+// for (let i = 0; i < smallbox_active.length; i++){
+//     tab_selected[i].addEventListener("click",
+//     function () {
+//         let x = document.querySelector(".bg-list-pink");
+//         if(x){
+//             x.classList.remove("bg-list-pink");
+//         }
+//         tab_selected[i].classList.add("bg-list-pink");
+//     });
+// }
 
 
 // Configure button Functinality

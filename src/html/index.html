@@ -24,75 +24,218 @@
                 </div>
             </div>
             <div id="mySidenav" class="sidenav close-sidenav">
-                <div class="text-close">
-                    <div class="AWS-text">Build an AWS Service</div>
-                    <a class="closebtn" onclick="closeSideNav()">&times;</a>
-                </div>
-                <div class="sidenav-line"></div>
-                <div class="text-typeService-choose">
-                    <div class="text-typeOfService">
-                        TYPE OF SERVICES
+                <form action="" class="sidenav-form">
+                    <div class="text-close">
+                        <div class="AWS-text">Build an AWS Service</div>
+                        <a class="closebtn" onclick="closeSideNav()">&times;</a>
+                    </div>
+                    <div class="sidenav-line"></div>
+                    <div class="text-typeService-choose">
+                        <div class="text-typeOfService">
+                            TYPE OF SERVICES
+                        </div>
+                        <div class="text-choose">
+                            Choose the type of service you want to create <img src="../icons/star.svg" alt=""
+                                class="pink_star">
+                        </div>
+                    </div>
+
+                    <div class="apiOr">
+                        <div class="smallbox">
+                            <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                            API
+                        </div>
+                        <div class="smallbox">
+                            <img src="../icons/function.svg" alt="" class="smallbox-icons">
+                            Function
+                        </div>
+                        <div class="smallbox active-pink">
+                            <img src="../icons/globe.svg" alt="" class="smallbox-icons">
+                            Website
+                        </div>
+                        <div class="text-OR">OR</div>
+                        <div class="smallbox">
+                            <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                            Serverless
+                        </div>
+                    </div>
+                    <div class="sidenav-line"></div>
+                    <div class="text-choose">
+                        Choose your runtime <img src="../icons/star.svg" alt="" class="pink_star">
+                    </div>
+                    <div class="language">
+                        <div class="smallbox active-pink">
+                            <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                            NodeJS
+                        </div>
+                        <div class="smallbox">
+                            <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                            Java
+                        </div>
+                        <div class="smallbox">
+                            <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                            C#
+                        </div>
+                        <div class="smallbox">
+                            <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                            Python
+                        </div>
+                    </div>
+                    <div class="sidenav-line"></div>
+                    <div class="text-choose">
+                        Choose your code repository <img src="../icons/information.svg" alt=""
+                            class="table_updown_arrow">
+                    </div>
+                    <div class="text-choose-smallest">
+                        Would you like to connect your existing code repository? If not, we will create one in your
+                        default respository!
+                    </div>
+
+                    <div class="Yes-I-would-like-to">
+                        <input type="checkbox" id="YesI" name="YesI" value="YesI" class="Yes-I">
+                        <div class="yes-text">Yes, I would like to connect my own respository!</div>
+                    </div>
+
+                    <div class="Gitlab-left">
+                        <div class="smallbox active-pink">
+                            <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                            GitLab
+                        </div>
+                        <div class="smallbox">
+                            <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                            Github
+                        </div>
                     </div>
                     <div class="text-choose">
-                        Choose the type of service you want to create*
+                        Repository Link <img src="../icons/star.svg" alt="" class="pink_star">
                     </div>
-                </div>
+                    <input type="text" name="addLink" id="addLink" placeholder="Add link to your Gitlab repository"
+                        class="input_sidenav">
+                    <div class="Yes-I-would-like-to">e.g.
+                        https://gitlab.com/tmobile/your-group-or-subgroups/your-project.git</div>
+                    <div class="sidenav-line"></div>
 
-                <div class="apiOr">
-                    <div class="smallbox">
-                        <img src="../icons/lego.svg" alt="" class="smallbox-icons">
-                        A
+                    <div class="text-typeOfService">
+                        ADDITIONAL DETAILS
                     </div>
-                    <div class="smallbox">
-                        <img src="../icons/function.svg" alt="" class="smallbox-icons">
-                        F
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            Service Name <img src="../icons/star.svg" alt="" class="pink_star">
+                        </div>
+                        <div class="small-grey-text">Name of your API, Microservice, Website, or Serverless application
+                            that you want to create.</div>
+                        <input type="text" name="enterService" id="enterService"
+                            placeholder="Enter your service Name e.g. 'hello world'" class="input_sidenav">
                     </div>
-                    <div class="smallbox">
-                        <img src="../icons/globe.svg" alt="" class="smallbox-icons">
-                        W
+
+                    <div class="sidenav-line"></div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            Namespace <img src="../icons/star.svg" alt="" class="pink_star">
+                        </div>
+                        <div class="small-grey-text">Namespaces provide easier abstraction to implement similar security
+                            & access control on your APIs.</div>
+                        <input type="text" name="enterService" id="enterService"
+                            placeholder="Enter your Namespace e.g “name-space”" class="input_sidenav">
                     </div>
-                    <div class="text-OR">OR</div>
-                    <div class="smallbox">
-                        <img src="../icons/lego.svg" alt="" class="smallbox-icons">
-                        S
+
+                    <div class="sidenav-line"></div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            Application <img src="../icons/star.svg" alt="" class="pink_star">
+                        </div>
+                        <div class="small-grey-text">Identify your application from the list!</div>
+                        <input type="text" name="enterService" id="enterService" placeholder="Select Application Name…"
+                            class="input_sidenav">
+                        <div class="Yes-I-would-like-to">
+                            <input type="checkbox" id="YesI" name="YesI" value="YesI" class="Yes-I">
+                            <div class="yes-text">I don’t see my application here</div>
+                        </div>
                     </div>
-                </div>
-                <div class="sidenav-line"></div>
-                <div class="text-choose">
-                    Choose your runtime*
-                </div>
-                <div class="apiOr">
-                    <div class="smallbox">
-                        <img src="../icons/lego.svg" alt="" class="smallbox-icons">
-                        N
+
+                    <div class="sidenav-line"></div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            Service Description <img src="../icons/star.svg" alt="" class="pink_star">
+                        </div>
+                        <input type="text" name="enterService" id="enterService"
+                            placeholder="Enter a Description for your Service e.g. “This API service will allow developers to easily manage branches throughout the DevCenter interface.”"
+                            class="input_sidenav">
                     </div>
-                    <div class="smallbox">
-                        <img src="../icons/lego.svg" alt="" class="smallbox-icons">
-                        J
+
+                    <div class="sidenav-line"></div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            Application Definition <img src="../icons/star.svg" alt="" class="pink_star">
+                        </div>
+                        <div class="small-grey-text color-back">See https://github.com/serverless/examples for examples
+                            of currently supported application definitions (<strong>serverless.yml</strong> file
+                            content).</div>
+                        <input type="text" name="enterService" id="enterService" placeholder="Select Application Name…"
+                            class="input_sidenav">
+                        <div class="Yes-I-would-like-to">
+                            <input type="checkbox" id="YesI" name="YesI" value="YesI" class="Yes-I">
+                            <div class="yes-text">I acknowledge that I will need to use serverless framework to
+                                define/update <strong>serverless.yml</strong> in my service repository.</div>
+                        </div>
                     </div>
-                    <div class="smallbox">
-                        <img src="../icons/lego.svg" alt="" class="smallbox-icons">
-                        C#
+
+                    <div class="sidenav-line"></div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            Access Restrictions
+                        </div>
+                        <div class="Yes-I-would-like-to">
+                            <input type="checkbox" id="YesI" name="YesI" value="YesI" class="Yes-I">
+                            <div class="yes-text">Internal Only</div>
+                        </div>
+                        <div class="small-grey-text">Websites will always be marked as internal. If required, you will
+                            be able to request public access for your website after service creation at the environment
+                            level.</div>
                     </div>
-                    <div class="smallbox">
-                        <img src="../icons/lego.svg" alt="" class="smallbox-icons">
-                        Python
+
+                    <div class="sidenav-line"></div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            Slack Channel Integration
+                        </div>
+                        <div class="Yes-I-would-like-to">
+                            <input type="checkbox" id="YesI" name="YesI" value="YesI" class="Yes-I">
+                            <div class="yes-text">Do you want us to notify you through #Slack?</div>
+                        </div>
                     </div>
-                </div>
-                <div class="sidenav-line"></div>
-                <div class="text-choose">
-                    Choose your code repository*
-                </div>
-                <div class="text-choose-smallest">
-                    Would you like to connect your existing code repository? If not, we will create one in your default respository!
-                </div>
-                <div class="Yes-I-would-like-to">
-                    Yes, I would like to connect my own respository!
-                </div>
-                <form action="">
+
+                    <div class="sidenav-line"></div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            Approvers <img src="../icons/star.svg" alt="" class="pink_star">
+                        </div>
+                        <div class="small-grey-text">User(s) who are required to approve code changes, deployment
+                            activities, etc. They should be a part of CORP AD Domain.</div>
+                        <input type="text" name="enterService" id="enterService"
+                            placeholder="Start typing (min 3 characters)…" class="input_sidenav">
+                    </div>
+
+                    <div class="sidenav-line"></div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            <img src="../icons/star.svg" alt="" class="pink_star">Indicates required fields
+                        </div>
+                    </div>
+                    <div class="submit_class">
+                        <input type="submit" value="SUBMIT" class="sidenav_submit">
+                    </div>
 
                 </form>
-                
             </div>
             <div class="rectangle-2">
                 <ul>
@@ -276,45 +419,50 @@
 
         <div class="second-half">
             <!-- Table view -->
-            <table class="table-hide table">
-                <thead>
-                    <th>BRANCH <img src="../icons/information.svg" alt="" class="table_updown_arrow"></th>
-                    <th>ENVIRONMENT ID <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow"></th>
-                    <th>ACCOUNT <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow"></th>
-                    <th>REGION <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow"></th>
-                    <th>LAST DEPLOYMENT <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow"></th>
-                    <th>DEPLOYMENT STATUS <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow"></th>
-                </thead>
-                <tbody>
-                    
-                    <tr>
-                        <td>master</td>
-                        <td>Prod</td>
-                        <td>npe2</td>
-                        <td>us-west2</td>
-                        <td>Septmeber 11,2020 8:52AM</td>
-                        <td>sucessfull</td>
+            <div class="table-view">
+                <table class="table-hide table">
+                    <thead>
+                        <tr>
+                        <th>BRANCH <img src="../icons/information.svg" alt="" class="table_updown_arrow"></th>
+                        <th>ENVIRONMENT ID <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow"></th>
+                        <th>ACCOUNT <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow"></th>
+                        <th>REGION <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow"></th>
+                        <th>LAST DEPLOYMENT <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow"></th>
+                        <th>DEPLOYMENT STATUS <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow">
+                        </th>
                     </tr>
-                    <!-- <tr class="table-line"></tr>     -->
-                    <tr>
-                        <td>master</td>
-                        <td>STG</td>
-                        <td>npe2</td>
-                        <td>us-west2</td>
-                        <td>Septmeber 11,2020 8:52AM</td>
-                        <td>sucessfull</td>
-                    </tr>
-                    <tr>
-                        <td>feature/development</td>
-                        <td>LK28QSK9L4-DEV</td>
-                        <td>npe2</td>
-                        <td>us-west2</td>
-                        <td>Septmeber 11,2020 8:52AM</td>
-                        <td>sucessfull</td>
-                    </tr>
-                  
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>master</td>
+                            <td class="table-color-content green-color">Prod</td>
+                            <td>npe2</td>
+                            <td>us-west2</td>
+                            <td>Septmeber 11,2020 8:52AM</td>
+                            <td class="success-green">sucessfull</td>
+                        </tr>
+                        <!-- <tr class="table-line"></tr>     -->
+                        <tr>
+                            <td>master</td>
+                            <td class="table-color-content orange-color">STG</td>
+                            <td>npe2</td>
+                            <td>us-west2</td>
+                            <td>Septmeber 11,2020 8:52AM</td>
+                            <td class="success-green">sucessfull</td>
+                        </tr>
+                        <tr>
+                            <td>feature/development</td>
+                            <td class="table-color-content blue-color">LK28QSK9L4-DEV</td>
+                            <td>npe2</td>
+                            <td>us-west2</td>
+                            <td>Septmeber 11,2020 8:52AM</td>
+                            <td class="success-green">sucessfull</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
             <div class="rectangle-26">
                 <section class="second-half-box">
                     <div class="shb">
