@@ -5,7 +5,6 @@ let modal = document.getElementById("myModal");
 let config_btn = document.getElementById("Configure-modal");
 let span = document.getElementsByClassName("close")[0];
 let bottomboxes = document.getElementsByClassName("bottom1");
-let aud = document.getElementById("myAudio");
 
 
 
@@ -37,40 +36,84 @@ for (let i = 0; i < tab_selected.length; i++){
 }
 
 
-// SideNav 
+// SideNav Open/close using on button
 function openSideNav() {
-    if (sidenav.style.transform == "translateX(100%)") {
-        sidenav.style.transform = "translateX(0%)";
-    } else {       
-        sidenav.style.transform = "translateX(100%)";
-    }
+    //Option 1: using .toggle
+    sidenav.classList.toggle("open-sidenav");
+
+    //Option2: using if else
+    // let status = document.querySelector(".open-sidenav");
+    // if(status){
+    //     sidenav.classList.remove("open-sidenav");
+    // }else{
+    //     sidenav.classList.add("open-sidenav");
+    // }
+    
 }
 
+// You can also close by clicking on the cross button 
 function closeSideNav() {
     sidenav.style.transform = "translateX(100%)";
 }
 
 window.onclick = function (event) {
-    if (event.target == sidenav) {
+    if (event.target != sidenav) {
         sidenav.style.transform = "translateX(100%)";
     }
 }
 
-//Sidenav active boxes
-// let smallbox_active = document.getElementsByClassName("smallbox");
-// for (let i = 0; i < smallbox_active.length; i++){
-//     tab_selected[i].addEventListener("click",
-//     function () {
-//         let x = document.querySelector(".bg-list-pink");
-//         if(x){
-//             x.classList.remove("bg-list-pink");
-//         }
-//         tab_selected[i].classList.add("bg-list-pink");
-//     });
-// }
+
+//Sidenav - selected box
+
+// API Row
+let api_box = document.getElementsByClassName("apiOr")[0];
+let box_selected = document.getElementsByClassName("small-api");
+
+for (let i = 0; i < box_selected.length; i++){
+    box_selected[i].addEventListener("click",
+    function () {
+        let x = api_box.querySelector(".active-pink");
+        if(x){
+            x.classList.remove("active-pink");
+            
+        }
+        box_selected[i].classList.add("active-pink");
+    });
+}
+
+//Language Row
+let lang_box = document.getElementsByClassName("language")[0];
+let box_selected2 = document.getElementsByClassName("small-lang");
+
+for (let i = 0; i < box_selected2.length; i++){
+    box_selected2[i].addEventListener("click",
+    function () {
+        let x = lang_box.querySelector(".active-pink");
+        if(x){
+            x.classList.remove("active-pink");
+        }
+        box_selected2[i].classList.add("active-pink");
+    });
+}
+
+//Git Row
+let git_box = document.getElementsByClassName("Gitlab-left")[0];
+let box_selected3 = document.getElementsByClassName("small-git");
+
+for (let i = 0; i < box_selected3.length; i++){
+    box_selected3[i].addEventListener("click",
+    function () {
+        let x = git_box.querySelector(".active-pink");
+        if(x){
+            x.classList.remove("active-pink");
+        }
+        box_selected3[i].classList.add("active-pink");
+    });
+}
 
 
-// Configure button Functinality
+// Configure button Functionality
+
 // When the user clicks the button, open the modal 
 config_btn.onclick = function () {
     modal.style.display = "block";
@@ -94,10 +137,6 @@ function largeThumbnail(){
     document.getElementsByClassName("table")[0].classList.add("table-hide");
     document.getElementsByClassName("rectangle-26")[0].classList.remove("table-hide");
     document.getElementsByClassName("bottom1")[0].classList.remove("table-hide");
-    // document.getElementsByClassName("rectangle-26")[0].style.display="flex";
-    // for (let i = 0; i < bottomboxes.length; i++) {
-    //     bottomboxes[i].style.display="flex";
-    // }
 }
 
 //List/Table view for bottom boxes
@@ -105,9 +144,5 @@ function listView(){
     document.getElementsByClassName("table")[0].classList.remove("table-hide");
     document.getElementsByClassName("rectangle-26")[0].classList.add("table-hide");
     document.getElementsByClassName("bottom1")[0].classList.add("table-hide");
-    // document.getElementsByClassName("rectangle-26")[0].style.display="block";
-    // for (let i = 0; i < bottomboxes.length; i++) {
-    //     bottomboxes[i].style.display="block";
-    // }
 }
 

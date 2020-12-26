@@ -34,7 +34,9 @@ body{
     object-fit: cover;
     cursor: pointer;
 }
-
+.img-logo:active { 
+    transform: scale(0.90);
+}
 
 .notification{
     width: 1.5rem;
@@ -61,8 +63,8 @@ body{
 }
    
 
-.close-sidenav{
-    transform: translateX(100%);
+.fixed-header .open-sidenav{
+    transform: translateX(0%);
 }
 
 .bg-black{
@@ -187,9 +189,16 @@ body{
     width: 12px;
     height: 12px;
     padding: 3px 2px;
-    background-color: #ed0295;
-    margin: 0 0.5rem 0 0;
+    /* -webkit-appearance: none; */
+    /* border: 1px solid; */
+    border: solid 0.7px #000000;
 }
+
+input[type="checkbox"]:checked{
+    background-color: #ed0295;
+    border: solid 0.7px #ed0295;
+}
+
 .Yes-I-would-like-to{
     font-family: Lato;
     font-size: 7.4px;
@@ -270,6 +279,11 @@ body{
     width: 5.125rem;
     height: 5.125rem;
     margin: 0 0.5rem 0 0;
+    cursor: pointer;
+}
+
+.smallbox:active { 
+    transform: scale(0.90);
 }
 
 .smallbox-icons{
@@ -321,6 +335,7 @@ body{
 .active-pink{
     border: solid 1.4px #e20074;
     color: #e20074;
+
 }    
   
 .Home {
@@ -442,6 +457,10 @@ a{
     outline: none;
 }
 
+.btn:active { 
+    transform: scale(0.90);
+  }
+
   .btn-pink{
     color: #ed008c;
     border: solid 1px #ed008c;
@@ -523,7 +542,7 @@ li {
     /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05); */
     background-color: #f5f4f4;
     justify-content: space-between;
-    margin: 2.1875rem 1rem 0.5rem 1.56rem
+    margin: 2rem 1rem 0.5rem 1.56rem
 }
 
 .service{
@@ -666,11 +685,20 @@ li {
 .menu-dots{
     width: 1.35rem;
     margin: 0 0.5rem 0 0;
+    cursor: pointer;
 }
 
 .menu-line{
     width: 1.59rem;
     margin: 0 0 0 0.5rem;
+    cursor: pointer;
+}
+.menu-dots:active { 
+    transform: scale(0.90);
+}
+
+.menu-line:active { 
+    transform: scale(0.90);
 }
 
 .second-half .table-hide{
