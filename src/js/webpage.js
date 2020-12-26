@@ -53,7 +53,7 @@ function openSideNav() {
 
 // You can also close by clicking on the cross button 
 function closeSideNav() {
-    sidenav.style.transform = "translateX(100%)";
+    sidenav.classList.remove("open-sidenav");
 }
 
 window.onclick = function (event) {
