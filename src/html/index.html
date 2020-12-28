@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    <title>JAZZ</title>
+</head>
+
+<body>
+    <div class="header ">
+        <div class="fixed-header">
+            <div class="rectangle">
+                <div class="header-left">
+                    <img src="../icons/jazz-text-icon.svg" srcset="img/jazz-text-3@2x.png 3x, img/jazz-text-3@3x.png 3x"
+                        class="Jazz_text3">
+                </div>
+                <div class="header-right">
+                    <img src="../icons/notification.svg" alt="" class="notification" onmousemove="bellAnimation()">
+                    <img src="../icons/jhon.PNG" alt="" class="img-logo" onclick="openSideNav()">
+                </div>
+            </div>
+            <div id="mySidenav" class="sidenav">
+                <form action="" class="sidenav-form">
+                    <div class="text-close">
+                        <div class="AWS-text">Build an AWS Service</div>
+                        <a class="closebtn" onclick="closeSideNav()">&times;</a>
+                    </div>
+                    <div class="sidenav-line"></div>
+                    <div class="text-typeService-choose">
+                        <div class="text-typeOfService">
+                            TYPE OF SERVICES
+                        </div>
+                        <div class="text-choose">
+                            Choose the type of service you want to create <img src="../icons/star.svg" alt=""
+                                class="pink_star">
+                        </div>
+                    </div>
+
+                    <div class="apiOr">
+                        <div class="smallbox small-api">
+                            <!-- <svg src="../icons/lego.svg" alt="" class="smallbox-icons">API</svg> -->
+                            <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                            API
+                        </div>
+                        <div class="smallbox small-api">
+                            <img src="../icons/function.svg" alt="" class="smallbox-icons">
+                            Function
+                        </div>
+                        <div class="smallbox small-api active-pink">
+                            <img src="../icons/globe.svg" alt="" class="smallbox-icons">
+                            Website
+                        </div>
+                        <div class="text-OR">OR</div>
+                        <div class="smallbox small-api">
+                            <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                            Serverless
+                        </div>
+                    </div>
+                    <div class="sidenav-line"></div>
+                    <div class="text-choose">
+                        Choose your runtime <img src="../icons/star.svg" alt="" class="pink_star">
+                    </div>
+                    <div class="language">
+                        <div class="smallbox small-lang active-pink">
+                            <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                            NodeJS
+                        </div>
+                        <div class="smallbox small-lang">
+                            <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                            Java
+                        </div>
+                        <div class="smallbox small-lang">
+                            <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                            C#
+                        </div>
+                        <div class="smallbox small-lang">
+                            <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                            Python
+                        </div>
+                    </div>
+                    <div class="sidenav-line"></div>
+                    <div class="text-choose">
+                        Choose your code repository <img src="../icons/information.svg" alt=""
+                            class="table_updown_arrow">
+                    </div>
+                    <div class="text-choose-smallest">
+                        Would you like to connect your existing code repository? If not, we will create one in your
+                        default respository!
+                    </div>
+
+                    <div class="Yes-I-would-like-to">
+                        <input type="checkbox" id="YesI" name="YesI" value="YesI" class="Yes-I">
+                        <div class="yes-text">Yes, I would like to connect my own respository!</div>
+                    </div>
+
+                    <div class="Gitlab-left">
+                        <div class="smallbox small-git active-pink">
+                            <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                            GitLab
+                        </div>
+                        <div class="smallbox small-git">
+                            <img src="../icons/lego.svg" alt="" class="smallbox-icons">
+                            Github
+                        </div>
+                    </div>
+                    <div class="text-choose">
+                        Repository Link <img src="../icons/star.svg" alt="" class="pink_star">
+                    </div>
+                    <input type="text" name="addLink" id="addLink" placeholder="Add link to your Gitlab repository"
+                        class="input_sidenav">
+                    <div class="Yes-I-would-like-to">e.g.
+                        https://gitlab.com/tmobile/your-group-or-subgroups/your-project.git</div>
+                    <div class="sidenav-line"></div>
+
+                    <div class="text-typeOfService">
+                        ADDITIONAL DETAILS
+                    </div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            Service Name <img src="../icons/star.svg" alt="" class="pink_star">
+                        </div>
+                        <div class="small-grey-text">Name of your API, Microservice, Website, or Serverless application
+                            that you want to create.</div>
+                        <input type="text" name="enterService" id="enterService"
+                            placeholder="Enter your service Name e.g. 'hello world'" class="input_sidenav">
+                    </div>
+
+                    <div class="sidenav-line"></div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            Namespace <img src="../icons/star.svg" alt="" class="pink_star">
+                        </div>
+                        <div class="small-grey-text">Namespaces provide easier abstraction to implement similar security
+                            & access control on your APIs.</div>
+                        <input type="text" name="enterService" id="enterService"
+                            placeholder="Enter your Namespace e.g “name-space”" class="input_sidenav">
+                    </div>
+
+                    <div class="sidenav-line"></div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            Application <img src="../icons/star.svg" alt="" class="pink_star">
+                        </div>
+                        <div class="small-grey-text">Identify your application from the list!</div>
+                        <input type="text" name="enterService" id="enterService" placeholder="Select Application Name…"
+                            class="input_sidenav">
+                        <div class="Yes-I-would-like-to">
+                            <input type="checkbox" id="YesI" name="YesI" value="YesI" class="Yes-I">
+                            <div class="yes-text">I don’t see my application here</div>
+                        </div>
+                    </div>
+
+                    <div class="sidenav-line"></div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            Service Description <img src="../icons/star.svg" alt="" class="pink_star">
+                        </div>
+                        <input type="text" name="enterService" id="enterService"
+                            placeholder="Enter a Description for your Service e.g. “This API service will allow developers to easily manage branches throughout the DevCenter interface.”"
+                            class="input_sidenav">
+                    </div>
+
+                    <div class="sidenav-line"></div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            Application Definition <img src="../icons/star.svg" alt="" class="pink_star">
+                        </div>
+                        <div class="small-grey-text color-back">See https://github.com/serverless/examples for examples
+                            of currently supported application definitions (<strong>serverless.yml</strong> file
+                            content).</div>
+                        <input type="text" name="enterService" id="enterService" placeholder="Select Application Name…"
+                            class="input_sidenav">
+                        <div class="Yes-I-would-like-to">
+                            <input type="checkbox" id="YesI" name="YesI" value="YesI" class="Yes-I">
+                            <div class="yes-text">I acknowledge that I will need to use serverless framework to
+                                define/update <strong>serverless.yml</strong> in my service repository.</div>
+                        </div>
+                    </div>
+
+                    <div class="sidenav-line"></div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            Access Restrictions
+                        </div>
+                        <div class="Yes-I-would-like-to">
+                            <input type="checkbox" id="YesI" name="YesI" value="YesI" class="Yes-I">
+                            <div class="yes-text">Internal Only</div>
+                        </div>
+                        <div class="small-grey-text">Websites will always be marked as internal. If required, you will
+                            be able to request public access for your website after service creation at the environment
+                            level.</div>
+                    </div>
+
+                    <div class="sidenav-line"></div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            Slack Channel Integration
+                        </div>
+                        <div class="Yes-I-would-like-to">
+                            <input type="checkbox" id="YesI" name="YesI" value="YesI" class="Yes-I">
+                            <div class="yes-text">Do you want us to notify you through #Slack?</div>
+                        </div>
+                    </div>
+
+                    <div class="sidenav-line"></div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            Approvers <img src="../icons/star.svg" alt="" class="pink_star">
+                        </div>
+                        <div class="small-grey-text">User(s) who are required to approve code changes, deployment
+                            activities, etc. They should be a part of CORP AD Domain.</div>
+                        <input type="text" name="enterService" id="enterService"
+                            placeholder="Start typing (min 3 characters)…" class="input_sidenav">
+                    </div>
+
+                    <div class="sidenav-line"></div>
+
+                    <div class="subsection">
+                        <div class="text-choose">
+                            <img src="../icons/star.svg" alt="" class="pink_star">Indicates required fields
+                        </div>
+                    </div>
+                    <div class="submit_class">
+                        <input type="submit" value="SUBMIT" class="sidenav_submit">
+                    </div>
+
+                </form>
+            </div>
+            <div class="rectangle-2">
+                <ul>
+                    <li><img src="../icons/arrow-left.svg" alt="" class="Shape-arrow"></li>
+                    <li><a href="#default" class="Home">Home</a></li>
+                    <li><i class="Line"></i></li>
+                    <li><a href="#news" class="Services">Service</a></li>
+                    <li><i class="Line"></i></li>
+                    <li><a href="#about" class="Service-One-API-Pyt">Service One(API-Python)</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-header">
+            <div class="Service-One">
+                <div class="service-icon">
+                    <section class="service-text">
+                        Service One
+                    </section>
+                    <section class="Oval"></section>
+                </div>
+                <div class="view-delete-button">
+                    <button class="btn">VIEW CODE<i class="far fa-bars"></i></button>
+                    <button class="btn btn-pink">DELETE SERVICE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg">
+        <ul class="list list-overview">
+            <li><a class="bg-list bg-list-pink" href="#" onclick="">OVERVIEW</a></li>
+            <li><a class="bg-list" href="#">ACCESS CONTROL</a></li>
+            <li><a class="bg-list" href="#">COST</a></li>
+            <li><a class="bg-list" href="#">METRICS</a></li>
+            <li><a class="bg-list" href="#">LOGS</a></li>
+            <li><a class="bg-list" href="#">ENVIRONMENT SETTINGS</a></li>
+        </ul>
+
+        <div class="outermost-container">
+            <div class="container con1">
+                <section class="sec1">
+                    <section class="top">
+                        General
+                        <img src="../icons/edit.svg" alt="" class="edit-icon">
+                    </section>
+                    <section class="content">
+                        <div>
+                            <div class="test-class">
+                                <label for="label-class">Namespace</label>
+                                <div class="input">jazztest</div>
+                            </div>
+                            <div class="test-class">
+                                <label for="label-class">Application</label>
+                                <div class="input">Lorem Ipsum</div>
+                            </div>
+                            <div class="test-class">
+                                <label for="label-class">Runtime</label>
+                                <div class="input">Python 2.7</div>
+                            </div>
+                            <div class="test-class">
+                                <label for="label-class">Deployments</label>
+                                <div class="input">Python</div>
+                            </div>
+                            <div class="test-class">
+                                <label for="label-class">Description</label>
+                                <div class="input">Python</div>
+                            </div>
+                            <div class="test-class">
+                                <label for="label-class">Created By</label>
+                                <div class="input">Abhishek Anand</div>
+                            </div>
+                            <div class="test-class">
+                                <label for="label-class">Service Type</label>
+                                <div class="input">Website</div>
+                            </div>
+                            <div class="test-class">
+                                <label for="label-class">Status </label>
+                                <div class="input">Active</div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="sec1 vertical">
+                    <section class="top">Approvals <img src="../icons/edit.svg" alt="" class="edit-icon"></section>
+                    <section class="content">
+                        <div>
+                            <div class="test-class">
+                                <label for="">Status </label>
+                                <div class="input">Active</div>
+                            </div>
+                            <div class="test-class">
+                                <label for="">Domain </label>
+                                <div class="input">tmo.ico</div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </div>
+            <div class="container con2">
+                <section class="sec1 sec-plat">
+                    <section class="security">
+                        <section class="top">Security<img src="../icons/edit.svg" alt="" class="edit-icon"></section>
+                        <section class="content">
+                            <div>
+                                <div class="test-class">
+                                    <label for="">Status </label>
+                                    <div class="input">Active</div>
+                                </div>
+                                <div class="test-class">
+                                    <label for="">Domain </label>
+                                    <div class="input">tmo.ico</div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                    <section class="platform">
+                        <section class="top">Platform<img src="../icons/edit.svg" alt="" class="edit-icon"></section>
+                        <section class="content">
+                            <div>
+                                <div class="test-class">
+                                    <label for="">Status </label>
+                                    <div class="input">Active</div>
+                                </div>
+                                <div class="test-class">
+                                    <label for="">Domain </label>
+                                    <div class="input">tmo.ico</div>
+                                </div>
+                            </div>
+
+                        </section>
+                    </section>
+                </section>
+            </div>
+
+            </section>
+        </div>
+
+
+
+
+        <div class="middle-box">
+            <div class="env">
+                <section class="env-text">
+                    ENVIRONMENTS
+                </section>
+                <section class="env-text">
+                    <img src="../icons/repair-tool.svg" alt="tools" class="repair-tool">
+                </section>
+            </div>
+            <div class="env-icons">
+                <section>
+                    <img class="menu-dots" src="../icons/menu-dots.svg" alt="" onclick="largeThumbnail()">
+                </section>
+                <section>
+                    <img class="menu-line" src="../icons/menu-line.svg" alt="" onclick="listView()">
+                </section>
+            </div>
+        </div>
+
+        <div class="mask-copy">
+            <section class="warning-sign">
+                <div>
+                    <img src="../icons/warning.svg" alt="" class="warning">
+                </div>
+                <div class="mask-copy-text">
+                    10 new environments have been added. Let's configure them!
+                </div>
+            </section>
+            <section class="warning-sign">
+                <button class="btn btn-pink" id="Configure-modal">CONFIGURE <img src="../icons/right-arrow.svg" alt="">
+                </button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Some text in the Modal..</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="second-half">
+            <!-- Table view -->
+            <div class="table-view">
+                <table class="table-hide table">
+                    <thead>
+                        <tr>
+                            <th>BRANCH <img src="../icons/information.svg" alt="" class="table_updown_arrow"></th>
+                            <th>ENVIRONMENT ID <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow">
+                            </th>
+                            <th>ACCOUNT <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow"></th>
+                            <th>REGION <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow"></th>
+                            <th>LAST DEPLOYMENT <img src="../icons/updown_arrow.svg" alt="" class="table_updown_arrow">
+                            </th>
+                            <th>DEPLOYMENT STATUS <img src="../icons/updown_arrow.svg" alt=""
+                                    class="table_updown_arrow">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>master</td>
+                            <td class="table-color-content green-color">Prod</td>
+                            <td>npe2</td>
+                            <td>us-west2</td>
+                            <td>Septmeber 11,2020 8:52AM</td>
+                            <td class="success-green">sucessfull</td>
+                        </tr>
+                        <!-- <tr class="table-line"></tr>     -->
+                        <tr>
+                            <td>master</td>
+                            <td class="table-color-content orange-color">STG</td>
+                            <td>npe2</td>
+                            <td>us-west2</td>
+                            <td>Septmeber 11,2020 8:52AM</td>
+                            <td class="success-green">sucessfull</td>
+                        </tr>
+                        <tr>
+                            <td>feature/development</td>
+                            <td class="table-color-content blue-color">LK28QSK9L4-DEV</td>
+                            <td>npe2</td>
+                            <td>us-west2</td>
+                            <td>Septmeber 11,2020 8:52AM</td>
+                            <td class="success-green">sucessfull</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="rectangle-26">
+                <section class="second-half-box">
+                    <div class="shb">
+                        <section class="Grey-QA">
+                            <img src="../icons/code-branch-solid.svg" alt="" class="code-branch-icon">
+                            <div class="Grey-text">master</div>
+                        </section>
+                        <section class="Blue-QA">
+                            <section class="prod">PROD</section>
+                        </section>
+                    </div>
+
+                    <div class="time-tick-box">
+                        <div class="time-dep">
+                            <section class="time-dis">
+                                3
+                                <section class="hour">
+                                    Hours
+                                    <section class="ago">Ago</section>
+                                </section>
+                            </section>
+                            <section class="dep-time">Deployment Time</section>
+                        </div>
+                        <div class="tick-dep">
+                            <img src="../icons/check.svg" class="check-icon">
+                            <section class="dep-stat">Deployment Status</section>
+                        </div>
+                    </div>
+                    <div class="shb shb-bottom-grey">
+                        <img src="../icons/ic-send.svg" class="ic_send">
+                        <img src="../icons/ic-logs.svg" class="ic_logs">
+                        <img src="../icons/ic-settings-grey.svg" class="ic_settings">
+                    </div>
+                </section>
+                <section class="second-half-box">
+                    <div class="shb">
+                        <section class="Grey-QA">
+                            <img src="../icons/code-branch-solid.svg" alt="" class="code-branch-icon">
+                            <div class="Grey-text">master</div>
+                        </section>
+                        <section class="Blue-QA">
+                            <section class="staging">STAGING</section>
+                        </section>
+                    </div>
+
+                    <div class="time-tick-box">
+                        <div class="time-dep">
+                            <section class="time-dis">
+                                3
+                                <section class="hour">
+                                    Hours
+                                    <section class="ago">Ago</section>
+                                </section>
+                            </section>
+                            <section class="dep-time">Deployment Time</section>
+                        </div>
+                        <div class="tick-dep">
+                            <img src="../icons/check.svg" class="check-icon">
+                            <section class="dep-stat">Deployment Status</section>
+                        </div>
+                    </div>
+                    <div class="shb shb-bottom-grey">
+                        <img src="../icons/ic-send.svg" class="ic_send">
+                        <img src="../icons/ic-logs.svg" class="ic_logs">
+                        <img src="../icons/ic-settings-grey.svg" class="ic_settings">
+                    </div>
+                </section>
+            </div>
+
+
+            <div class="rectangle-bottom">
+                <div class="bottom1">
+                    <section class="second-half-box">
+                        <div class="shb">
+                            <section class="Grey-QA">
+                                <img src="../icons/code-branch-solid.svg" alt="" class="code-branch-icon">
+                                <div class="Grey-text">master</div>
+                            </section>
+                            <section class="Blue-QA">
+                                <section class="prod blue-color">QA</section>
+                            </section>
+                        </div>
+
+                        <div class="time-tick-box">
+                            <div class="time-dep">
+                                <section class="time-dis">
+                                    3
+                                    <section class="hour">
+                                        Hours
+                                        <section class="ago">Ago</section>
+                                    </section>
+                                </section>
+                                <section class="dep-time">Deployment Time</section>
+                            </div>
+                            <div class="tick-dep">
+                                <img src="../icons/check.svg" class="check-icon">
+                                <section class="dep-stat">Deployment Status</section>
+                            </div>
+                        </div>
+                        <div class="shb shb-bottom-grey">
+                            <img src="../icons/ic-send.svg" class="ic_send">
+                            <img src="../icons/ic-logs.svg" class="ic_logs">
+                            <img src="../icons/ic-settings-grey.svg" class="ic_settings">
+                        </div>
+                    </section>
+                    <section class="second-half-box">
+                        <div class="shb">
+                            <section class="Grey-QA">
+                                <img src="../icons/code-branch-solid.svg" alt="" class="code-branch-icon">
+                                <div class="Grey-text">master</div>
+                            </section>
+                            <section class="Blue-QA">
+                                <section class="prod blue-color">N3NHXZ12345678</section>
+                            </section>
+                        </div>
+
+                        <div class="time-tick-box">
+                            <div class="time-dep">
+                                <section class="time-dis">
+                                    3
+                                    <section class="hour">
+                                        Hours
+                                        <section class="ago">Ago</section>
+                                    </section>
+                                </section>
+                                <section class="dep-time">Deployment Time</section>
+                            </div>
+                            <div class="tick-dep">
+                                <img src="../icons/check.svg" class="check-icon">
+                                <section class="dep-stat">Deployment Status</section>
+                            </div>
+                        </div>
+                        <div class="shb shb-bottom-grey">
+                            <img src="../icons/ic-send.svg" class="ic_send">
+                            <img src="../icons/ic-logs.svg" class="ic_logs">
+                            <img src="../icons/ic-settings-grey.svg" class="ic_settings">
+                        </div>
+                    </section>
+                    <section class="second-half-box">
+                        <div class="shb">
+                            <section class="Grey-QA">
+                                <img src="../icons/code-branch-grey.svg" alt="" class="code-branch-icon">
+                                <div class="Grey-text grey-color">feature</div>
+                            </section>
+                            <section class="Blue-QA">
+                                <section class="prod blue-color">N/A</section>
+                            </section>
+                        </div>
+                        <div class="minus-dep">
+                            <div class="shb shb-mid">
+                                <section class="check-icon check-class "><img src="../icons/minus.svg"
+                                        class="minus-class">
+                                </section>
+                            </div>
+                            <div class="three-hour-bottom">
+                                <section class="dep-stat">Deployment Status</section>
+                            </div>
+                        </div>
+                        <div class="shb shb-bottom-grey shb-bottom-pink">
+                            <img src="../icons/ic-settings.svg" class="ic_settings">
+                        </div>
+                    </section>
+                </div>
+                <div class="bottom1">
+                    <section class="second-half-box">
+                        <div class="shb">
+                            <section class="Grey-QA">
+                                <img src="../icons/code-branch-grey.svg" alt="" class="code-branch-icon">
+                                <div class="Grey-text grey-color">feature</div>
+                            </section>
+                            <section class="Blue-QA">
+                                <section class="prod blue-color">N/A</section>
+                            </section>
+                        </div>
+                        <div class="minus-dep">
+                            <div class="shb shb-mid">
+                                <section class="check-icon check-class "><img src="../icons/minus.svg"
+                                        class="minus-class">
+                                </section>
+                            </div>
+                            <div class="three-hour-bottom">
+                                <section class="dep-stat">Deployment Status</section>
+                            </div>
+                        </div>
+                        <div class="shb shb-bottom-grey shb-bottom-pink">
+                            <img src="../icons/ic-settings.svg" class="ic_settings">
+                        </div>
+                    </section>
+                    <section class="second-half-box">
+                        <div class="shb">
+                            <section class="Grey-QA">
+                                <img src="../icons/code-branch-grey.svg" alt="" class="code-branch-icon">
+                                <div class="Grey-text grey-color">feature</div>
+                            </section>
+                            <section class="Blue-QA">
+                                <section class="prod blue-color">N/A</section>
+                            </section>
+                        </div>
+                        <div class="minus-dep">
+                            <div class="shb shb-mid">
+                                <section class="check-icon check-class "><img src="../icons/minus.svg"
+                                        class="minus-class">
+                                </section>
+                            </div>
+                            <div class="three-hour-bottom">
+                                <section class="dep-stat">Deployment Status</section>
+                            </div>
+                        </div>
+                        <div class="shb shb-bottom-grey shb-bottom-pink">
+                            <img src="../icons/ic-settings.svg" class="ic_settings">
+                        </div>
+                    </section>
+                    <section class="second-half-box">
+                        <div class="shb">
+                            <section class="Grey-QA">
+                                <img src="../icons/code-branch-grey.svg" alt="" class="code-branch-icon">
+                                <div class="Grey-text grey-color">feature</div>
+                            </section>
+                            <section class="Blue-QA">
+                                <section class="prod blue-color">N/A</section>
+                            </section>
+                        </div>
+                        <div class="minus-dep">
+                            <div class="shb shb-mid">
+                                <section class="check-icon check-class "><img src="../icons/minus.svg"
+                                        class="minus-class">
+                                </section>
+                            </div>
+                            <div class="three-hour-bottom">
+                                <section class="dep-stat">Deployment Status</section>
+                            </div>
+                        </div>
+                        <div class="shb shb-bottom-grey shb-bottom-pink">
+                            <img src="../icons/ic-settings.svg" class="ic_settings">
+                        </div>
+                    </section>
+                </div>
+                <div class="bottom1">
+                    <section class="second-half-box">
+                        <div class="shb">
+                            <section class="Grey-QA">
+                                <img src="../icons/code-branch-grey.svg" alt="" class="code-branch-icon">
+                                <div class="Grey-text grey-color">feature</div>
+                            </section>
+                            <section class="Blue-QA">
+                                <section class="prod blue-color">N/A</section>
+                            </section>
+                        </div>
+                        <div class="minus-dep">
+                            <div class="shb shb-mid">
+                                <section class="check-icon check-class "><img src="../icons/minus.svg"
+                                        class="minus-class">
+                                </section>
+                            </div>
+                            <div class="three-hour-bottom">
+                                <section class="dep-stat">Deployment Status</section>
+                            </div>
+                        </div>
+                        <div class="shb shb-bottom-grey shb-bottom-pink">
+                            <img src="../icons/ic-settings.svg" class="ic_settings">
+                        </div>
+                    </section>
+                    <section class="second-half-box">
+                        <div class="shb">
+                            <section class="Grey-QA">
+                                <img src="../icons/code-branch-grey.svg" alt="" class="code-branch-icon">
+                                <div class="Grey-text grey-color">feature</div>
+                            </section>
+                            <section class="Blue-QA">
+                                <section class="prod blue-color">N/A</section>
+                            </section>
+                        </div>
+                        <div class="minus-dep">
+                            <div class="shb shb-mid">
+                                <section class="check-icon check-class "><img src="../icons/minus.svg"
+                                        class="minus-class">
+                                </section>
+                            </div>
+                            <div class="three-hour-bottom">
+                                <section class="dep-stat">Deployment Status</section>
+                            </div>
+                        </div>
+                        <div class="shb shb-bottom-grey shb-bottom-pink">
+                            <img src="../icons/ic-settings.svg" class="ic_settings">
+                        </div>
+                    </section>
+                    <section class="second-half-box">
+                        <div class="shb">
+                            <section class="Grey-QA">
+                                <img src="../icons/code-branch-grey.svg" alt="" class="code-branch-icon">
+                                <div class="Grey-text grey-color">feature</div>
+                            </section>
+                            <section class="Blue-QA">
+                                <section class="prod blue-color">N/A</section>
+                            </section>
+                        </div>
+                        <div class="minus-dep">
+                            <div class="shb shb-mid">
+                                <section class="check-icon check-class "><img src="../icons/minus.svg"
+                                        class="minus-class">
+                                </section>
+                            </div>
+                            <div class="three-hour-bottom">
+                                <section class="dep-stat">Deployment Status</section>
+                            </div>
+                        </div>
+                        <div class="shb shb-bottom-grey shb-bottom-pink">
+                            <img src="../icons/ic-settings.svg" class="ic_settings">
+                        </div>
+                    </section>
+                </div>
+                <div class="bottom1">
+                    <section class="second-half-box">
+                        <div class="shb">
+                            <section class="Grey-QA">
+                                <img src="../icons/code-branch-grey.svg" alt="" class="code-branch-icon">
+                                <div class="Grey-text grey-color">feature</div>
+                            </section>
+                            <section class="Blue-QA">
+                                <section class="prod blue-color">N/A</section>
+                            </section>
+                        </div>
+                        <div class="minus-dep">
+                            <div class="shb shb-mid">
+                                <section class="check-icon check-class "><img src="../icons/minus.svg"
+                                        class="minus-class">
+                                </section>
+                            </div>
+                            <div class="three-hour-bottom">
+                                <section class="dep-stat">Deployment Status</section>
+                            </div>
+                        </div>
+                        <div class="shb shb-bottom-grey shb-bottom-pink">
+                            <img src="../icons/ic-settings.svg" class="ic_settings">
+                        </div>
+                    </section>
+                    <section class="second-half-box">
+                        <div class="shb">
+                            <section class="Grey-QA">
+                                <img src="../icons/code-branch-grey.svg" alt="" class="code-branch-icon">
+                                <div class="Grey-text grey-color">feature</div>
+                            </section>
+                            <section class="Blue-QA">
+                                <section class="prod blue-color">N/A</section>
+                            </section>
+                        </div>
+                        <div class="minus-dep">
+                            <div class="shb shb-mid">
+                                <section class="check-icon check-class "><img src="../icons/minus.svg"
+                                        class="minus-class">
+                                </section>
+                            </div>
+                            <div class="three-hour-bottom">
+                                <section class="dep-stat">Deployment Status</section>
+                            </div>
+                        </div>
+                        <div class="shb shb-bottom-grey shb-bottom-pink">
+                            <img src="../icons/ic-settings.svg" class="ic_settings">
+                        </div>
+                    </section>
+                    <section class="second-half-box">
+                        <div class="shb">
+                            <section class="Grey-QA">
+                                <img src="../icons/code-branch-grey.svg" alt="" class="code-branch-icon">
+                                <div class="Grey-text grey-color">feature</div>
+                            </section>
+                            <section class="Blue-QA">
+                                <section class="prod blue-color">N/A</section>
+                            </section>
+                        </div>
+                        <div class="minus-dep">
+                            <div class="shb shb-mid">
+                                <section class="check-icon check-class "><img src="../icons/minus.svg"
+                                        class="minus-class">
+                                </section>
+                            </div>
+                            <div class="three-hour-bottom">
+                                <section class="dep-stat">Deployment Status</section>
+                            </div>
+                        </div>
+                        <div class="shb shb-bottom-grey shb-bottom-pink">
+                            <img src="../icons/ic-settings.svg" class="ic_settings">
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="../js/webpage.js"></script>
+</body>
+
+</html>
