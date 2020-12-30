@@ -140,9 +140,9 @@ window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-    if ((event.target == sidenav) && (sidenav.classList.contains("open-sidenav"))) {
-        sidenav.classList.remove("open-sidenav");
-    }
+    // else if ((event.target !== sidenav)) {
+    //     sidenav.classList.remove("open-sidenav");
+    // }
 }
 
 
